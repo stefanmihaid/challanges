@@ -1,0 +1,2 @@
+select name from employees where id not in (select distinct managerid from employees where managerid is not null)
+select userid, avg(duration) from sessions group by userid having count(userid)>1
